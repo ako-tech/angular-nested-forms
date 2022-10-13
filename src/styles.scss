@@ -1,1 +1,109 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --default-font-family: "Poppins", sans-serif;
+  --body-bg-color: #f5f5f5;
+  --default-text-color: #333;
+  --base-separation: 1rem;
+  --half-separation: calc(var(--base-separation) / 2);
+  --double-separation: calc(var(--base-separation) * 2);
+  --primary-color: #5e00ea;
+  --primary-color-high: #7d29fa;
+}
+
+* {
+  font-family: var(--default-font-family);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 1.25rem;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  font-size: 1rem;
+  color: var(--default-text-color);
+  display: grid;
+  grid-template: 1fr / 1fr;
+  width: 100vw;
+  place-items: start center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: var(--half-separation) var(--base-separation);
+  margin: var(--base-separation) 0;
+
+  legend {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #333;
+    padding: 0 var(--half-separation);
+  }
+
+  label {
+    padding: 0 var(--half-separation);
+  }
+}
+
+label {
+  font-weight: 500;
+  font-size: 0.825em;
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+
+  &:focus {
+    outline-color: var(--primary-color);
+  }
+}
+
+.ng-touched.ng-invalid:is(input, textarea),
+.ng-dirty.ng-invalid:is(input, textarea) {
+  outline: 2px solid #bd0c0c;
+}
+
+.ng-dirty.ng-pending:is(input, textarea) {
+  outline: 2px solid #838a2a;
+}
+
+button[type="submit"] {
+  padding: 12px 16px;
+  background-color: #5e00ea;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: var(--base-separation);
+
+  &:hover {
+    background-color: var(--primary-color-high);
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: #707070;
+    color: #fff;
+    cursor: not-allowed;
+  }
+}

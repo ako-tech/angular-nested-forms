@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'ako-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: '<ako-checkout></ako-checkout>',
+  styles: [
+    `
+      :host {
+        display: flex;
+        justify-content: stretch;
+        width: 100%;
+        padding: var(--half-separation) var(--base-separation);
+      }
+    `,
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  title = 'project';
+  title = 'address-control';
 }

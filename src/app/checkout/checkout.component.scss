@@ -1,0 +1,30 @@
+:host {
+  width: 100%;
+  margin-top: var(--half-separation);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--base-separation);
+  justify-content: center;
+}
+
+form {
+  width: 460px;
+}
+
+pre {
+  display: none;
+  padding: var(--double-separation);
+  background-color: white;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 920px) {
+  :host {
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  pre {
+    display: block;
+  }
+}
