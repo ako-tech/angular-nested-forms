@@ -1,7 +1,7 @@
 <form #f="ngForm">
   <label>
     Nombre y Apellidos
-    <input type="text" name="fullName" ngModel />
+    <input type="text" name="fullname" ngModel />
   </label>
   <label>
     Correo Electrónico
@@ -41,4 +41,11 @@
   <button type="submit">Siguiente</button>
 </form>
 
-<pre>form: {{ f.value | json }}</pre>
+<pre>
+<strong>Template-Driven</strong>
+
+<strong>NgForm.value:</strong>
+{{ f.value | json }}
+
+<strong>Status:</strong> {{ f.status }}
+</pre>
