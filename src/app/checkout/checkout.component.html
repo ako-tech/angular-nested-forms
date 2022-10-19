@@ -7,36 +7,14 @@
     Correo Electrónico
     <input type="email" name="email" ngModel />
   </label>
-  <fieldset ngModelGroup="deliveryAddress">
-    <legend>Dirección de Entrega</legend>
-    <label>
-      Nombre y Número de la Calle
-      <input type="text" name="line1" ngModel />
-    </label>
-    <label>
-      Localidad
-      <input type="text" name="city" ngModel />
-    </label>
-    <label>
-      Código Postal
-      <input type="text" name="zipcode" ngModel />
-    </label>
-  </fieldset>
-  <fieldset ngModelGroup="billingAddress">
-    <legend>Dirección de Facturación</legend>
-    <label>
-      Nombre y Número de la Calle
-      <input type="text" name="line1" ngModel />
-    </label>
-    <label>
-      Localidad
-      <input type="text" name="city" ngModel />
-    </label>
-    <label>
-      Código Postal
-      <input type="text" name="zipcode" ngModel />
-    </label>
-  </fieldset>
+  <ako-address
+    groupName="deliveryAddress"
+    legend="Dirección de Entrega"
+  ></ako-address>
+  <ako-address
+    groupName="billingAddress"
+    legend="Dirección de Facturación"
+  ></ako-address>
 
   <button type="submit">Siguiente</button>
 </form>
