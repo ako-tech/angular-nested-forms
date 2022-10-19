@@ -1,0 +1,51 @@
+<form [formGroup]="form">
+  <label>
+    Nombre y Apellidos
+    <input type="text" formControlName="fullName" />
+  </label>
+  <label>
+    Correo Electrónico
+    <input type="email" formControlName="email" />
+  </label>
+  <fieldset formGroupName="deliveryAddress">
+    <legend>Dirección de Entrega</legend>
+    <label>
+      Nombre y Número de la Calle
+      <input type="text" formControlName="line1" />
+    </label>
+    <label>
+      Localidad
+      <input type="text" formControlName="city" />
+    </label>
+    <label>
+      Código Postal
+      <input type="text" formControlName="zipCode" />
+    </label>
+  </fieldset>
+  <fieldset formGroupName="billingAddress">
+    <legend>Dirección de Facturación</legend>
+    <label>
+      Nombre y Número de la Calle
+      <input type="text" formControlName="line1" />
+    </label>
+    <label>
+      Localidad
+      <input type="text" formControlName="city" />
+    </label>
+    <label>
+      Código Postal
+      <input type="text" formControlName="zipCode" />
+    </label>
+  </fieldset>
+
+  <button type="submit">Siguiente</button>
+</form>
+
+<pre>
+<strong>Reactive</strong>
+
+<strong>FormGroup.value:</strong>
+{{ form.value | json }}
+
+<strong>Status:</strong> {{ form.status }}
+</pre>

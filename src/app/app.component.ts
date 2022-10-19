@@ -2,7 +2,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'ako-root',
-  template: '<ako-checkout></ako-checkout>',
+  template: `
+    <!-- <ako-checkout></ako-checkout> -->
+    <ako-checkout-reactive></ako-checkout-reactive>
+  `,
   styles: [
     `
       :host {
