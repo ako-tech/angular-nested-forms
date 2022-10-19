@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { generateAddressFormGroup } from '../address/address.component';
 
 @Component({
   selector: 'ako-checkout',
@@ -11,16 +12,8 @@ export class CheckoutComponent implements OnInit {
   form = this.fb.group({
     fullName: '',
     email: '',
-    deliveryAddress: this.fb.group({
-      line1: '',
-      city: '',
-      zipCode: '',
-    }),
-    billingAddress: this.fb.group({
-      line1: '',
-      city: '',
-      zipCode: '',
-    }),
+    deliveryAddress: generateAddressFormGroup(),
+    billingAddress: generateAddressFormGroup(),
   });
   constructor(private fb: FormBuilder) {}
 

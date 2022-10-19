@@ -1,0 +1,15 @@
+<fieldset [formGroupName]="groupName">
+  <legend>{{ legend }}</legend>
+  <label>
+    Nombre y Número de la Calle
+    <input type="text" formControlName="line1" />
+  </label>
+  <label>
+    Localidad
+    <input type="text" formControlName="city" />
+  </label>
+  <label>
+    Código Postal
+    <input type="text" formControlName="zipCode" />
+  </label>
+</fieldset>

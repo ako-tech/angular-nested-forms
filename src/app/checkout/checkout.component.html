@@ -7,36 +7,14 @@
     Correo Electrónico
     <input type="email" formControlName="email" />
   </label>
-  <fieldset formGroupName="deliveryAddress">
-    <legend>Dirección de Entrega</legend>
-    <label>
-      Nombre y Número de la Calle
-      <input type="text" formControlName="line1" />
-    </label>
-    <label>
-      Localidad
-      <input type="text" formControlName="city" />
-    </label>
-    <label>
-      Código Postal
-      <input type="text" formControlName="zipCode" />
-    </label>
-  </fieldset>
-  <fieldset formGroupName="billingAddress">
-    <legend>Dirección de Facturación</legend>
-    <label>
-      Nombre y Número de la Calle
-      <input type="text" formControlName="line1" />
-    </label>
-    <label>
-      Localidad
-      <input type="text" formControlName="city" />
-    </label>
-    <label>
-      Código Postal
-      <input type="text" formControlName="zipCode" />
-    </label>
-  </fieldset>
+  <ako-address
+    groupName="deliveryAddress"
+    legend="Dirección de Entrega"
+  ></ako-address>
+  <ako-address
+    groupName="billingAddress"
+    legend="Dirección de Facturación"
+  ></ako-address>
 
   <button type="submit">Siguiente</button>
 </form>
