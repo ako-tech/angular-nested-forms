@@ -11,16 +11,16 @@ export class CheckoutReactiveComponent implements OnInit {
   form = this.fb.group({
     fullName: '',
     email: '',
-    deliveryAddress: this.fb.group({
+    deliveryAddress: {
       line1: '',
       city: '',
       zipCode: '',
-    }),
-    billingAddress: this.fb.group({
+    },
+    billingAddress: {
       line1: '',
       city: '',
       zipCode: '',
-    }),
+    },
   });
 
   constructor(private fb: FormBuilder) {}

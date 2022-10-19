@@ -1,0 +1,15 @@
+<fieldset [formGroup]="form">
+  <legend>{{ legend }}</legend>
+  <label>
+    Nombre y Número de la Calle
+    <input type="text" formControlName="line1" (blur)="onTouchedCb?.()" />
+  </label>
+  <label>
+    Localidad
+    <input type="text" formControlName="city" (blur)="onTouchedCb?.()" />
+  </label>
+  <label>
+    Código Postal
+    <input type="text" formControlName="zipCode" (blur)="onTouchedCb?.()" />
+  </label>
+</fieldset>
