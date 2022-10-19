@@ -1,40 +1,40 @@
-<form #f="ngForm">
+<form [formGroup]="form">
   <label>
     Nombre y Apellidos
-    <input type="text" name="fullname" ngModel />
+    <input type="text" formControlName="fullName" />
   </label>
   <label>
     Correo Electrónico
-    <input type="email" name="email" ngModel />
+    <input type="email" formControlName="email" />
   </label>
-  <fieldset ngModelGroup="deliveryAddress">
+  <fieldset formGroupName="deliveryAddress">
     <legend>Dirección de Entrega</legend>
     <label>
       Nombre y Número de la Calle
-      <input type="text" name="line1" ngModel />
+      <input type="text" formControlName="line1" />
     </label>
     <label>
       Localidad
-      <input type="text" name="city" ngModel />
+      <input type="text" formControlName="city" />
     </label>
     <label>
       Código Postal
-      <input type="text" name="zipcode" ngModel />
+      <input type="text" formControlName="zipCode" />
     </label>
   </fieldset>
-  <fieldset ngModelGroup="billingAddress">
+  <fieldset formGroupName="billingAddress">
     <legend>Dirección de Facturación</legend>
     <label>
       Nombre y Número de la Calle
-      <input type="text" name="line1" ngModel />
+      <input type="text" formControlName="line1" />
     </label>
     <label>
       Localidad
-      <input type="text" name="city" ngModel />
+      <input type="text" formControlName="city" />
     </label>
     <label>
       Código Postal
-      <input type="text" name="zipcode" ngModel />
+      <input type="text" formControlName="zipCode" />
     </label>
   </fieldset>
 
@@ -42,10 +42,10 @@
 </form>
 
 <pre>
-<strong>Template-Driven</strong>
+<strong>Reactive</strong>
 
-<strong>NgForm.value:</strong>
-{{ f.value | json }}
+<strong>FormGroup.value:</strong>
+{{ form.value | json }}
 
-<strong>Status:</strong> {{ f.status }}
+<strong>Status:</strong> {{ form.status }}
 </pre>
