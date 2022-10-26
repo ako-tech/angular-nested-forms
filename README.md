@@ -1,27 +1,20 @@
-# Project
+# Aplicación de ejemplo para el manejo de Formularios Anidados en Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+Esta es una aplicación básica con un formulario de check-out simplificado con direcciones de envío y facturación, la cual usamos como base en este [video](https://youtu.be/R63hcU2wqj0) para mostrar 3 maneras de crear un componente reutilizable para los inputs de las direcciones para evitar la repetición de código sin perder la compatibilidad con las librerias de formularios de Angular.
 
-## Development server
+El repositorio esta divido en 4 ramas, master con el estado inicial de la aplicación y las 3 ramas para cada una de las opciones de manejo.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Ramas (Branches)
 
-## Code scaffolding
+- [Estado inicial](https://github.com/ako-tech/angular-nested-forms)
+- [SubForm Dirigidos por plantilla](https://github.com/ako-tech/angular-nested-forms/tree/subform-templatedriven)
+- [SubForm Reactivos](https://github.com/ako-tech/angular-nested-forms/tree/subform-reactive)
+- [ControlValueAccessor](https://github.com/ako-tech/angular-nested-forms/tree/cva)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Comandos
 
-## Build
+El proyecto está realizado sobre la v14.2 de Angular.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Para levantar un servidor de desarrollo usar el comando `ng serve`. Este estará disponible en `http://localhost:4200/`.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para compilar la aplicación usar el comando `ng build`. Pudiendo usar la opcion `--prod` para compilar la versión de producción. Los archivos de la aplicación estarán disponibles en la carpeta `dist/`.
